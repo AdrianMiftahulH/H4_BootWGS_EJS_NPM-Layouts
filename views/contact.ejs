@@ -1,0 +1,31 @@
+<section class="container mt-3">
+    <center>
+        <h1>
+            <%= title %>
+        </h1>
+    </center>
+    <table class="table table-primary mt-3">
+        <thead>
+            <tr>
+                <th scope="col">Nama</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (cont.length < 1) { %>
+                <h1>Contact data is empty</h1>
+            <% }else{ %>
+                <% cont.forEach(function(contP) { %>
+                    <tr class="table-light">
+                        <td>
+                            <%= contP.nama %>
+                        </td>
+                        <td>
+                            <%= contP.email %>
+                        </td>
+                    </tr>
+                <% }); %>
+            <% } %>
+        </tbody>
+    </table>
+</section>
